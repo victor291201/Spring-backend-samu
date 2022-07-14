@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS roles(
     PRIMARY KEY(id)
 );
 
-CREATE TABLE IF NO EXISTS usuarios(
+CREATE TABLE IF NOT EXISTS usuarios(
     id INT NOT NULL AUTO_INCREMENT,
     username VARCHAR(120) NOT NULL,
     nombre VARCHAR(120) NOT NULL,
@@ -25,5 +25,37 @@ CREATE TABLE IF NO EXISTS usuarios(
     UNIQUE(username)
 );
 
+CREATE TABLE IF NOT EXISTS roles_usuarios(
+    roles_id INT NOT NULL,
+    usuarios_id INT NOT NULL,
+    PRIMARY KEY(roles_id, usuarios_id),
+    FOREIGN KEY (roles_id) REFERENCES roles(id),
+    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
+);
 
+CREATE TABLE IF NOT EXISTS delitos(
+    id INT NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(45) NOT NULL,
+    descripcion TEXT NULL,
+    usuarios_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
+);
 
+CREATE TABLE IF NOT EXISTS casos(
+    id INT NOT NULL AUTO_INCREMENT,
+    fecha_hora DATETIME NULL DEFAULT now(),
+    latitud FLOAT NULL,
+    longitud FLOAT NULL,
+    altitud FLOAT NULL,
+    visible TINYINT NULL DEFAULT 1,
+    descripcion VARCHAR(200) NULL,
+    url_map TEXT NULL,
+    rmi_url TEXT NULL,
+    usuarios_id INT NOT NULL,
+    delitos_id INT NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id),
+    FOREIGN KEY (delitos_id) REFERENCES delitos(id)
+);
+/*POPULATION DE LAS TABLAS*/
