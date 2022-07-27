@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS roles_usuarios(
     roles_id INT NOT NULL,
     usuarios_id INT NOT NULL,
     PRIMARY KEY(roles_id, usuarios_id),
-    FOREIGN KEY (roles_id) REFERENCES roles(id),
+    FOREIGN KEY (roles_id) REFERENCES roles(id) ,
     FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
 );
 

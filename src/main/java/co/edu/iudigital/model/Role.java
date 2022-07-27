@@ -1,12 +1,14 @@
 package co.edu.iudigital.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -29,6 +31,9 @@ public class Role implements Serializable{
 	
 	//descripcion TEXT NULL
     private String descripcion;
+    
+    @ManyToMany(mappedBy = "roles")
+    private List<Usuario> usuarios;
 
 	public Long getId() {
 		return id;
@@ -53,4 +58,14 @@ public class Role implements Serializable{
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+	
+	
 }
