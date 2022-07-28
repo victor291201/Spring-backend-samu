@@ -7,6 +7,5 @@ import co.edu.iudigital.model.Delito;
 
 @Repository
 public interface IDelitoRepository 
-extends JpaRepository<Delito, Long>{
-
+	extends JpaRepository<Delito, Long>{
 }
