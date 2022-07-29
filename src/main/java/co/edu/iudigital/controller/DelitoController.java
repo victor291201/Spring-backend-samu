@@ -12,9 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.iudigital.dto.DelitoDTO;
 import co.edu.iudigital.service.IDelitoService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
 
 @RestController
 @RequestMapping("/delitos")
+@Api(value = "/delitos", tags = {"Delitos"})
+@SwaggerDefinition(tags = {
+		@Tag(name = "Delitos", description = "Gestion API Delitos")
+})
 public class DelitoController {
 
 	private static final Logger log = 
@@ -23,6 +31,11 @@ public class DelitoController {
 	@Autowired
 	private IDelitoService delitoService;
 	
+	@ApiOperation(
+			value = "Obtienes todos los delitos",
+			response = List.class, 
+			produces = "application/json",
+			httpMethod = "GET")
 	@GetMapping
 	public ResponseEntity<List<DelitoDTO>> index(){
 		log.info("se consultan todos los delitos");
