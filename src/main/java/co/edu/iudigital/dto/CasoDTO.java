@@ -33,6 +33,8 @@ public class CasoDTO implements Serializable{
 	private String nombre;
 	
 	private String image;
+	
+	private Long delitoId;
 
 	public Long getId() {
 		return id;
@@ -128,6 +130,14 @@ public class CasoDTO implements Serializable{
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public Long getDelitoId() {
+		return delitoId;
+	}
+
+	public void setDelitoId(Long delitoId) {
+		this.delitoId = delitoId;
 	}
 	
 	

@@ -16,6 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 	
+	// http://localhost:8082/api/v1/swagger-ui.html#
 	//http://localhost:8082/api/v1/v2/api-docs
 	//https://editor.swagger.io/	
 	

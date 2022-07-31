@@ -37,7 +37,7 @@ public class Delito implements Serializable{
 	
 	//usuarios_id INT NOT NULL
     //FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
-	@ManyToOne(cascade = CascadeType.ALL) // por default: fetch = EAGER
+	@ManyToOne // por default: fetch = EAGER
 	@JoinColumn(name = "usuarios_id")
 	private Usuario usuario;
 

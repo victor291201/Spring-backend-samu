@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -62,7 +63,11 @@ public class Usuario implements Serializable{
 	//image TEXT NULL DEFAULT 'https://happytravel.viajes/wp-content/uploads/2020/04/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png',
 	private String image;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.LAZY, 
+			cascade = {
+					CascadeType.REMOVE,
+					CascadeType.REFRESH
+			})
 	@JoinTable(name = "roles_usuarios", 
 			  joinColumns = {
 					  @JoinColumn(name = "usuarios_id")

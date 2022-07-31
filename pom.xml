@@ -48,41 +48,57 @@
 		    <artifactId>hibernate-validator</artifactId>
 		    <version>8.0.0.CR1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-reload4j -->
 		<dependency>
-		    <groupId>org.apache.logging.log4j</groupId>
-		    <artifactId>log4j-core</artifactId>
-		    <version>2.18.0</version>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-reload4j</artifactId>
+		    <version>1.7.36</version>
+		    <scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
-		<dependency>
-		    <groupId>io.swagger.core.v3</groupId>
-		    <artifactId>swagger-annotations</artifactId>
-		    <version>2.1.10</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger-ui</artifactId>
-		    <version>3.0.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger2</artifactId>
-		    <version>3.0.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger-ui</artifactId>
-		    <version>3.0.0</version>
-		</dependency>
+
+		<!-- Documentation -->
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+            <scope>compile</scope>
+        </dependency>
 		<!-- Emviar email -->
     	<dependency>
 	      	<groupId>org.springframework.boot</groupId>
 	      	<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<version>2.3.4.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<version>1.0.9.RELEASE</version>
+		</dependency>
+		<!-- Si tienes JDK 9+ agregar las siguientes:-->
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api 
+		<dependency>
+		    <groupId>javax.xml.bind</groupId>
+		    <artifactId>jaxb-api</artifactId>
+		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime 
+		<dependency>
+		    <groupId>org.glassfish.jaxb</groupId>
+		    <artifactId>jaxb-runtime</artifactId>
+		</dependency>-->
 	</dependencies>
 
 	<build>

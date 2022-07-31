@@ -2,15 +2,16 @@ package co.edu.iudigital.service;
 
 import java.util.List;
 
+import co.edu.iudigital.exception.RestException;
 import co.edu.iudigital.model.Usuario;
 
 public interface IUsuarioService {
 
-	List<Usuario> findAll();
+	public List<Usuario> findAll() throws RestException;
 	
-	Usuario findById(Long id);
+	public Usuario findById(Long id) throws RestException;
 	
-	Usuario save(Usuario usuario);
+	public Usuario save(Usuario usuario) throws RestException;
 	
-	Usuario findByUsername(String username);
+	public Usuario findByUsername(String username);
 }
