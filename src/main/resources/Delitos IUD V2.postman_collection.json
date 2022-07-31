@@ -45,13 +45,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "password",
-							"value": "123456",
+							"key": "username",
+							"value": "HelpmeIUD",
 							"type": "string"
 						},
 						{
-							"key": "username",
-							"value": "reactapp",
+							"key": "password",
+							"value": "123456",
 							"type": "string"
 						}
 					]
@@ -63,7 +63,7 @@
 					"urlencoded": [
 						{
 							"key": "username",
-							"value": "caro.velasquez8@gmail.com",
+							"value": "juliomzarate5@gmail.com",
 							"type": "text"
 						},
 						{
@@ -90,17 +90,6 @@
 						"oauth",
 						"token"
 					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GetDelitoById",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
 				}
 			},
 			"response": []
@@ -196,7 +185,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vd3d3LndlYWN0Lm9yZy93cC1jb250ZW50L3VwbG9hZHMvMjAxNi8xMC9CbGFuay1wcm9maWxlLnBuZyIsImlkX3VzdWFyaW8iOiIyIiwidXNlcl9uYW1lIjoiYWxiZXJ0by5jYWxsZUBlc3QuaXVkaWdpdGFsLmVkdS5jbyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJmZWNoYV9uYWNpbWllbnRvIjoiMTk5NS0wOS0wMSIsImV4cCI6MTY1NzQ3ODg0OSwibm9tYnJlIjoiQWxiZXJ0byIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYmVlOTU1YS1kYWRjLTQ4MTMtYTRlNi1iMDI1MWUyMDkzZjIiLCJjbGllbnRfaWQiOiJIZWxwbWVJVUQifQ.SMAjFK5ykm_XZNJd_8i7ywYwlpGsGlblBxX0rvGswVw",
+							"value": "{{access_token}}",
 							"type": "string"
 						}
 					]
@@ -205,7 +194,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"latitud\": 6.1684344,\r\n    \"longitud\": -75.5943721,\r\n    \"altitud\": 19.25,\r\n    \"visible\": true,\r\n    \"descripcion\": \"violación\",\r\n    \"urlMap\": \"https://maps.google.com/maps?ll=6.166938,-75.605606&z=11&t=m&hl=es-ES&gl=US&mapclient=apiv3\",\r\n    \"rmiUrl\": \"https://www.google.com/maps/@6.1669376,-75.6056064,11z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3\",\r\n    \"usuario\": {\r\n        \"id\": 1\r\n    },\r\n    \"delito\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"raw": "{\r\n    \"latitud\": 6.1684344,\r\n    \"longitud\": -75.5943721,\r\n    \"altitud\": 19.25,\r\n    \"visible\": true,\r\n    \"descripcion\": \"violación\",\r\n    \"urlMap\": \"https://maps.google.com/maps?ll=6.166938,-75.605606&z=11&t=m&hl=es-ES&gl=US&mapclient=apiv3\",\r\n    \"rmiUrl\": \"https://www.google.com/maps/@6.1669376,-75.6056064,11z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3\",\r\n    \"usuarioId\": 1,\r\n    \"delitoId\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -222,26 +211,6 @@
 						"api",
 						"v1",
 						"casos"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "CreateDelito",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "localhost:8082/api/v1/delitos",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"api",
-						"v1",
-						"delitos"
 					]
 				}
 			},
@@ -275,17 +244,6 @@
 						"usuario",
 						"1"
 					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GetAllUsers",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
 				}
 			},
 			"response": []
@@ -342,7 +300,7 @@
 						{
 							"key": "image",
 							"type": "file",
-							"src": "/C:/Users/JULIOCESARMARTINEZ/Pictures/descarga (1).png"
+							"src": "/C:/Users/JULIOCESARMARTINEZ/Desktop/Blake_Lively.png"
 						}
 					]
 				},
